@@ -27,7 +27,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, foreign_key: true|
+|name|string|null: false, foreign_key: true|
 
 
 ### Association
