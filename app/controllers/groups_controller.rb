@@ -2,7 +2,13 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:edit, :update]
   def index
   end
-
+  def show_last_message
+    if (last_message = messages.last).present?
+      last_message.content? ? last_message.content : '画像が投稿されています'
+    else
+      'まだメッセージはありません。'
+    end
+  end
   def new
     @group = Group.new
     @group.users << current_user
